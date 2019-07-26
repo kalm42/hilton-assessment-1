@@ -59,9 +59,18 @@
           aria-labelledby="accordion-map-id"
           id="section-map"
         >
-          <!-- <div>
-            Map here, visible on click.
-          </div> -->
+          <picture>
+            <source
+              srcset="https://maps.googleapis.com/maps/api/staticmap?center=720+South+Michigan+Avenue,+Chicago,+Illinois,+60605&zoom=13&size=300x150&maptype=roadmap
+              &key=YOUR_API_KEY 300w https://maps.googleapis.com/maps/api/staticmap?center=720+South+Michigan+Avenue,+Chicago,+Illinois,+60605&zoom=13&size=600x300&maptype=roadmap
+          &key=YOUR_API_KEY 600w"
+            />
+            <img
+              src="https://maps.googleapis.com/maps/api/staticmap?center=720+South+Michigan+Avenue,+Chicago,+Illinois,+60605&zoom=13&size=300x150&maptype=roadmap
+            &key=YOUR_API_KEY"
+              alt="A map of where the Hilton is located."
+            />
+          </picture>
         </div>
         <h3>
           <button
