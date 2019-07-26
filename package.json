@@ -1,0 +1,23 @@
+{
+  "name": "hilton_assessment_1",
+  "version": "1.0.0",
+  "description": "Static site for Hilton assessment",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node ./server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kalm42/hilton-assessment-1.git"
+  },
+  "author": "Kyle Melton @kalm42",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kalm42/hilton-assessment-1/issues"
+  },
+  "homepage": "https://github.com/kalm42/hilton-assessment-1#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
