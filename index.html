@@ -15,14 +15,25 @@
       </nav>
       <h1>Hotel Details</h1>
       <a href="/">
-        <picture>
-          <!-- TODO: Hilton Logo -->
+        <picture id="logo">
+          <source
+            srcset="./images/HI_mk_logo_hiltonbrandlogo_3.jpg"
+            media="(min-width: 900px)"
+          />
+          <img
+            src="./images/HI_mk_logo_hiltonbrandlogo_3_transparent.png"
+            alt="Hilton logo a large H with a swoop through it."
+          />
         </picture>
       </a>
     </header>
     <main>
-      <picture>
-        <!-- TODO: Picture deets here -->
+      <picture class="hotel-picture">
+        <source srcset="./images/hotelexterior.jpg" />
+        <img
+          src="./images/hotelexterior.jpg"
+          alt="The outside of the Hilton Chicago"
+        />
       </picture>
       <address></address>
       <p><a href="tel:+13129224400">1-312-922-4400</a></p>
