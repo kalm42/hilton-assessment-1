@@ -8,57 +8,265 @@
   </head>
   <body>
     <header>
-      <nav>
+      <nav id="header__nav">
         <ul>
           <li><a href="/">Back</a></li>
         </ul>
       </nav>
       <h1>Hotel Details</h1>
       <a href="/">
-        <picture>
-          <!-- TODO: Hilton Logo -->
+        <picture id="logo">
+          <source
+            srcset="./images/HI_mk_logo_hiltonbrandlogo_3.jpg"
+            media="(min-width: 900px)"
+          />
+          <img
+            src="./images/HI_mk_logo_hiltonbrandlogo_3_transparent.png"
+            alt="Hilton logo a large H with a swoop through it."
+          />
         </picture>
       </a>
     </header>
     <main>
-      <picture>
-        <!-- TODO: Picture deets here -->
+      <picture class="hotel-picture">
+        <source srcset="./images/hotelexterior.jpg" />
+        <img
+          src="./images/hotelexterior.jpg"
+          alt="The outside of the Hilton Chicago"
+        />
       </picture>
-      <address></address>
-      <p><a href="tel:+13129224400">1-312-922-4400</a></p>
-      <div>
-        <div>
-          <h2>Map</h2>
-          <!-- <div>
-            Map here, visible on click.
-          </div> -->
+      <h2 class="hotel-name">Hilton Chicago</h2>
+      <address class="hotel-address">
+        720 South Michigan Avenue <br />
+        Chicago, Illinois, 60605
+      </address>
+      <a class="hotel-phone-number" href="tel:+13129224400">1-312-922-4400</a>
+      <div class="accordion">
+        <h3>
+          <button
+            aria-expanded="false"
+            class="accordion__trigger"
+            aria-controls="section-map"
+          >
+            <span class="accordion__title"
+              >Map<span class="accordion__icon" role="img"></span
+            ></span>
+          </button>
+        </h3>
+        <div
+          class="accordion__panel"
+          role="region"
+          aria-labelledby="accordion-map-id"
+          id="section-map"
+        >
+          <picture>
+            <source
+              srcset="https://maps.googleapis.com/maps/api/staticmap?center=720+South+Michigan+Avenue,+Chicago,+Illinois,+60605&zoom=13&size=300x150&maptype=roadmap
+              &key=YOUR_API_KEY 300w https://maps.googleapis.com/maps/api/staticmap?center=720+South+Michigan+Avenue,+Chicago,+Illinois,+60605&zoom=13&size=600x300&maptype=roadmap
+          &key=YOUR_API_KEY 600w"
+            />
+            <img
+              src="https://maps.googleapis.com/maps/api/staticmap?center=720+South+Michigan+Avenue,+Chicago,+Illinois,+60605&zoom=13&size=300x150&maptype=roadmap
+            &key=YOUR_API_KEY"
+              alt="A map of where the Hilton is located."
+            />
+          </picture>
         </div>
-        <div>
-          <h2>Photo gallery</h2>
-          <!-- <div>
-            Photo gallery here, visible on click.
-          </div> -->
+        <h3>
+          <button
+            aria-expanded="false"
+            class="accordion__trigger"
+            aria-controls="section-photo"
+          >
+            <span class="accordion__title"
+              >Photo gallery<span class="accordion__icon" role="img"></span
+            ></span>
+          </button>
+        </h3>
+        <div
+          class="accordion__panel"
+          role="region"
+          aria-labelledby="accordion-photo-id"
+          id="section-photo"
+        >
+          <div class="gallery">
+            <div class="gallery__image">
+              <picture>
+                <source
+                  media="(max-width: 499px)"
+                  srcset="
+                    ./images/christopher-jolly-GqbU78bdJFM-unsplash@0,25x.jpg,
+                    ./images/christopher-jolly-GqbU78bdJFM-unsplash@0,5x.jpg  2x
+                  "
+                />
+                <source
+                  media="(min-width: 500px)"
+                  srcset="
+                    ./images/christopher-jolly-GqbU78bdJFM-unsplash@0,5x.jpg,
+                    ./images/christopher-jolly-GqbU78bdJFM-unsplash.jpg      2x
+                  "
+                />
+                <img
+                  src="./images/christopher-jolly-GqbU78bdJFM-unsplash@0,25x.jpg"
+                  alt="black table lamp on nightstand"
+                />
+              </picture>
+              <p>
+                Photo by Christopher Jolly on Unsplash
+              </p>
+            </div>
+            <div class="gallery__image">
+              <picture>
+                <source
+                  media="(max-width: 499px)"
+                  srcset="
+                    ./images/markus-spiske-g5ZIXjzRGds-unsplash@0,25x.jpg,
+                    ./images/markus-spiske-g5ZIXjzRGds-unsplash@0,5x.jpg  2x
+                  "
+                />
+                <source
+                  media="(min-width: 500px)"
+                  srcset="
+                    ./images/markus-spiske-g5ZIXjzRGds-unsplash@0,5x.jpg,
+                    ./images/markus-spiske-g5ZIXjzRGds-unsplash.jpg      2x
+                  "
+                />
+                <img
+                  src="./images/markus-spiske-g5ZIXjzRGds-unsplash@0,25x.jpg"
+                  alt="white bed comforter near table lamp"
+                />
+              </picture>
+              <p>
+                Photo by Markus Spiske on Unsplash
+              </p>
+            </div>
+            <div class="gallery__image">
+              <picture>
+                <source
+                  media="(max-width: 499px)"
+                  srcset="
+                    ./images/eunice-stahl-CxiJt88QJdQ-unsplash@0,25x.jpg,
+                    ./images/eunice-stahl-CxiJt88QJdQ-unsplash@0,5x.jpg  2x
+                  "
+                />
+                <source
+                  media="(min-width: 500px)"
+                  srcset="
+                    ./images/eunice-stahl-CxiJt88QJdQ-unsplash@0,5x.jpg,
+                    ./images/eunice-stahl-CxiJt88QJdQ-unsplash.jpg      2x
+                  "
+                />
+                <img
+                  src="./images/eunice-stahl-CxiJt88QJdQ-unsplash@0,25x.jpg"
+                  alt="woman standing near window inside bedroom"
+                />
+              </picture>
+              <p>
+                Photo by Eunice Stahl on Unsplash
+              </p>
+            </div>
+            <div class="gallery__image">
+              <picture>
+                <source
+                  media="(max-width: 499px)"
+                  srcset="
+                    ./images/david-sjunnesson-JaC8Yf6fYGk-unsplash@0,25x.jpg,
+                    ./images/david-sjunnesson-JaC8Yf6fYGk-unsplash@0,5x.jpg  2x
+                  "
+                />
+                <source
+                  media="(min-width: 500px)"
+                  srcset="
+                    ./images/david-sjunnesson-JaC8Yf6fYGk-unsplash@0,5x.jpg,
+                    ./images/david-sjunnesson-JaC8Yf6fYGk-unsplash.jpg      2x
+                  "
+                />
+                <img
+                  src="./images/david-sjunnesson-JaC8Yf6fYGk-unsplash@0,25x.jpg"
+                  alt="beige armchair"
+                />
+              </picture>
+              <p>
+                Photo by David Sjunnesson on Unsplash
+              </p>
+            </div>
+          </div>
         </div>
-        <div>
-          <h2>Amenities</h2>
-          <!-- <div>
-            List of amenities, visible here on click.
-          </div> -->
+        <h3>
+          <button
+            aria-expanded="false"
+            class="accordion__trigger"
+            aria-controls="section-amenities"
+          >
+            <span class="accordion__title"
+              >Amenities<span class="accordion__icon" role="img"></span
+            ></span>
+          </button>
+        </h3>
+        <div
+          class="accordion__panel"
+          role="region"
+          aria-labelledby="accordion-amenities-id"
+          id="section-amenities"
+        >
+          <ul>
+            <li>Free WiFi</li>
+            <li>Meeting space</li>
+            <li>Restaurant and Bar</li>
+            <li>Fitness center</li>
+            <li>Free parking</li>
+            <li>Microwave and refrigerator</li>
+          </ul>
         </div>
-        <div>
-          <h2>Hours</h2>
-          <!-- <div>
-            List of hours here, today's highlighter, also visible on click
-          </div> -->
+        <h3>
+          <button
+            aria-expanded="false"
+            class="accordion__trigger"
+            aria-controls="section-amenities"
+          >
+            <span class="accordion__title"
+              >Hours<span class="accordion__icon" role="img"></span
+            ></span>
+          </button>
+        </h3>
+        <div
+          class="accordion__panel"
+          role="region"
+          aria-labelledby="accordion-hours-id"
+          id="section-hours"
+        >
+          <ul>
+            <li>Monday: 9:00am - 5:00pm</li>
+            <li>Tuesday: 9:00am - 5:00pm</li>
+            <li>Wednesday: 9:00am - 5:00pm</li>
+            <li>Thursday: 9:00am - 5:00pm</li>
+            <li>
+              <span class="section-hours__today">Friday: 9:00am - 5:00pm</span>
+            </li>
+            <li>Saturday: 9:00am - 5:00pm</li>
+            <li>Sunday: 9:00am - 5:00pm</li>
+          </ul>
         </div>
       </div>
     </main>
     <footer>
       <div>
-        <!-- TODO: Contact info -->
+        <p>How can we help?</p>
+        <a href="tel:+1-800-445-8667">1-800-HILTONS</a>
+        <p>Call us, it&rsquo;s toll-free.</p>
       </div>
       <div>
-        <!-- TODO: Footer nav -->
+        <ul>
+          <li>
+            <a href="/">Contact Us</a>
+          </li>
+          <li>
+            <a href="/">Careers</a>
+          </li>
+          <li>
+            <a href="/">Site Map</a>
+          </li>
+        </ul>
         <p>&copy; 2019</p>
       </div>
     </footer>
