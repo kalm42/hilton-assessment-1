@@ -111,7 +111,6 @@ header h1 {
 #header__nav {
   font-size: 0.95rem;
   width: 100%;
-  height: 100%;
 }
 
 #header__nav ul {
@@ -224,4 +223,19 @@ footer {
 
 footer a {
   color: white;
+}
+
+@media screen and (min-width: 700px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: calc(3vw);
+  }
+  .accordion {
+    margin: 0;
+  }
+  footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
